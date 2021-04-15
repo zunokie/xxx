@@ -1,0 +1,160 @@
+body {
+    padding: 0 10px;
+    background-color: #ff0;
+    background-image: url(https://res.cloudinary.com/marcofugaro/image/upload/v1462223624/polka.patternGREEEEEN_tvoxal.png);
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    -webkit-transform-origin: 76% 49%;
+    transform-origin: 76% 49%;
+    width: 42%;
+    cursor: -webkit-grab;
+    cursor: grab;
+    padding-top: 6%;
+}
+
+.hand:active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.hand img {
+    width: 100%;
+    display: block;
+}
+
+.hand .meat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.hand .hide {
+    opacity: 0;
+}
+
+.mouth-up,
+.mouth-down {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 18%;
+}
+
+.mouth-up {
+    z-index: 3;
+}
+
+.mouth-gagging,
+.mouth-sucking {
+    display: none;
+}
+
+.hint {
+    position: absolute;
+    left: 3%;
+    top: 65%;
+    font-family: Bangers, sans-serif;
+    font-weight: bold;
+    font-size: 6vw;
+    color: #103289;
+    line-height: 8vw;
+    letter-spacing: 2px;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.hint.visible {
+    opacity: 1;
+}
+
+.hint span {
+    display: block;
+    font-size: 9vw;
+    -webkit-animation: jump-up 1.7s 5s ease infinite;
+    animation: jump-up 1.7s 5s ease infinite;
+}
+
+@media (max-width: 700px) {
+    .hint {
+        font-size: 8vw;
+        line-height: 12vw;
+    }
+    .hint span {
+        font-size: 14vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hint {
+        font-size: 50px;
+        line-height: 70px;
+        top: 70%;
+    }
+    .hint span {
+        font-size: 90px;
+    }
+}
+
+@-webkit-keyframes jump-up {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    20% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes jump-up {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    20% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
